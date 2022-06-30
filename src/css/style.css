@@ -1,0 +1,60 @@
+@import './modules/start.css';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.send {
+    width: 200px;
+    height: 70px;
+    background-color: aqua;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.list {
+    width: 400px;
+    height: 200px;
+    border: 1px solid red;
+
+}
+
+.errorText {
+    color: red;
+    font-size: 20px;
+    display: none;
+}
+
+.score {
+    width: 400px;
+    border: 1px solid red;
+}
+
+.score__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.score__name {
+    font-size: 30px;
+}
+
+.score__point,
+.score__name {
+    font-size: 30px;
+    border: 1px solid blue;
+    padding: 10px;
+}
+
+.startPage {
+    width: 786px;
+    padding: 100px 40px;
+    border: 1px solid red;
+}
