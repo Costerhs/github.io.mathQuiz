@@ -1,4 +1,6 @@
 @import './modules/start.css';
+@import './modules/game.css';
+@import './__reset.css';
 
 .container {
     display: flex;

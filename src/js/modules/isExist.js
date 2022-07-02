@@ -1,5 +1,5 @@
-function isExist(name, names) {
-    return names.some(el => el === name);
+function isExist(name, users) {
+    return users.some(el => el.name === name);
 }
 
 export default isExist;
