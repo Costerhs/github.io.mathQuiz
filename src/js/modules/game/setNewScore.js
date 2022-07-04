@@ -1,8 +1,8 @@
-import getUser from "../getUser";
-import setData from "../setData";
+import getUser from "../command/getUser";
+import setData from "./setData";
 
 const setNewScore = (score) => {
-    let user = getUser();
+    const user = getUser();
     if (user.point < score) {
         user.point = score
     }
