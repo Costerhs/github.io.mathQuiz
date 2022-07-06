@@ -1,8 +1,11 @@
-function putInOrder(arr) {
+function putInOrder(arr, elem) {
     return arr.sort((a, b) => {
-        if (a.point > b.point) {
+        if (a[elem] > b[elem]) {
+            console.log(a[elem])
             return -1
-        } else if (b.point > a.point) {
+
+        } else if (b[elem] > a[elem]) {
+            console.log(a[elem])
             return 1
         }
         return 0

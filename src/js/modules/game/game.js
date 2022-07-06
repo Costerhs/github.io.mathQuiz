@@ -1,5 +1,7 @@
+import getMode from "../command/getMode.js"
 import showScore from "./showScore.js"
 import showScoreWindow from "./showScoreWindow.js"
+import timerAttack from "./timerAttack.js"
 import toggleExample from "./toggleExample.js"
 
 const operators = ['+', '-', '*', '/']
@@ -32,6 +34,7 @@ function game() {
     const operator = document.querySelector('.game__operator')
     const result = document.querySelector('.game__result')
     const winElement = document.querySelector('.game__score')
+    const stopGame = document.querySelector('.game__stop')
 
     const renderExample = (data) => {
         num1.textContent = data.num1
@@ -45,6 +48,13 @@ function game() {
     let example = generateExample()
     renderExample(example)
 
+    if (getMode() === 'timeAttack') {
+        timerAttack(4)
+        setTimeout(() => {
+            showScore(wins, overallWins, fails);
+        }, 4000);
+    }
+
     result?.addEventListener('keydown', (e) => {
         if (e.key === 'Enter') {
             if (!result.value) return
@@ -56,7 +66,7 @@ function game() {
 
             winElement.textContent = wins
             result.value = ''
-
+            // showScore(wins, overallWins, fails);
             setTimeout(() => {
                 example = generateExample()
                 renderExample(example)
@@ -64,11 +74,14 @@ function game() {
 
             toggleExample()
         }
-        if (fails >= 4) {
-            showScoreWindow()
-            showScore(wins, overallWins, fails);
-        }
     })
+
+    stopGame.addEventListener('click', () => {
+        showScoreWindow()
+        showScore(wins, overallWins, fails);
+    })
+
+
 }
 
-export default game
+export default game;

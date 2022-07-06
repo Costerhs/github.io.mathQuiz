@@ -1,10 +1,17 @@
 .game {
     width: 100%;
-    height: 1000px;
+    height: 970px;
     background: url(../../img/moon.png) no-repeat;
     background-size: cover;
     position: inherit;
-    overflow-x: hidden;
+    overflow: hidden;
+}
+
+.game .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .game__finish {
@@ -25,7 +32,7 @@
 .game__mid {
     position: relative;
 
-    padding-top: 200px;
+    /* padding-top: 100px; */
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: row;
@@ -70,9 +77,6 @@
     }
 }
 
-/*
-z-index: -1;
-    filter: blur(5px); */
 .game__result {
     background: none;
     border: 1px solid white;
@@ -82,11 +86,23 @@ z-index: -1;
 }
 
 .game__down {
+
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    font-size: 100px;
+    justify-content: space-around;
+    font-size: 20px;
     color: white;
+    width: 80%;
+    height: 100px;
+    background: rgba(29, 34, 37, 0.452);
+}
+
+.game__down-left {
+    font-size: 50px;
+    display: flex;
+    gap: 20px;
+
 }
 
 .game__end-passive {
@@ -141,4 +157,45 @@ z-index: -1;
 
 .score__incorrect {
     font-size: 30px;
+}
+
+.game__username {
+    font-size: 40px;
+    color: white;
+    text-align: center;
+
+}
+
+.game__up {
+    /* background: rgba(39, 66, 73, 0.5); */
+    border-radius: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 60px;
+    width: 80%;
+    height: 90px;
+}
+
+.game__timer {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    font-size: 30px;
+}
+
+.game__stop {
+    /* border: 1px solid red; */
+    padding: 10px 20px;
+    border-radius: 100px;
+    background: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.game__stop:hover {
+    background: rgba(0, 0, 0, 0.8);
+    transition: all 0.2s ease-in-out;
 }

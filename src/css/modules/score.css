@@ -1,0 +1,87 @@
+.score {
+    height: 1000px;
+    width: 100%;
+    background: url(../../img/zakyat.jpg) no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.score .container {}
+
+.score__table {
+    width: 700px;
+    height: 800px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50px;
+}
+
+.score__form {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}
+
+.score__modes {}
+
+.score__mode {
+    text-align: center;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.start__radio {
+    appearance: none;
+}
+
+.score__label {
+    cursor: pointer;
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 24px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+
+.start__radio:checked+.score__label {
+    border: 3px solid black;
+    font-size: 22px;
+}
+
+.score__users {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-top: 20px;
+    gap: 20px;
+    font-size: 26px;
+}
+
+.score__item {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.score__name {}
+
+.score__point {}
