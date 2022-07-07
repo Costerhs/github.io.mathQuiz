@@ -1,5 +1,5 @@
 import getMode from "../command/getMode.js"
-import showScore from "./showScore.js"
+import setScore from "./setScore.js"
 import showScoreWindow from "./showScoreWindow.js"
 import timerAttack from "./timerAttack.js"
 import toggleExample from "./toggleExample.js"
@@ -37,9 +37,11 @@ function game() {
     const stopGame = document.querySelector('.game__stop')
 
     const renderExample = (data) => {
-        num1.textContent = data.num1
-        num2.textContent = data.num2
-        operator.textContent = data.operator
+        if (num1) {
+            num1.textContent = data.num1
+            num2.textContent = data.num2
+            operator.textContent = data.operator
+        }
     }
 
     let overallWins = 0
@@ -49,10 +51,10 @@ function game() {
     renderExample(example)
 
     if (getMode() === 'timeAttack') {
-        timerAttack(4)
+        timerAttack(14)
         setTimeout(() => {
-            showScore(wins, overallWins, fails);
-        }, 4000);
+            setScore(wins, overallWins, fails);
+        }, 14000);
     }
 
     result?.addEventListener('keydown', (e) => {
@@ -66,7 +68,7 @@ function game() {
 
             winElement.textContent = wins
             result.value = ''
-            // showScore(wins, overallWins, fails);
+
             setTimeout(() => {
                 example = generateExample()
                 renderExample(example)
@@ -76,9 +78,9 @@ function game() {
         }
     })
 
-    stopGame.addEventListener('click', () => {
+    stopGame?.addEventListener('click', () => {
         showScoreWindow()
-        showScore(wins, overallWins, fails);
+        setScore(wins, overallWins, fails);
     })
 
 

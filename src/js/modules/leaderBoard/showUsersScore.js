@@ -1,12 +1,13 @@
-import getMode from "../command/getMode";
 import putInOrder from "./putInOrder";
 
-const showUserScore = () => {
+const showUserScore = (mode) => {
     let users = JSON.parse(localStorage.getItem('users'));
-    let mode = getMode();
+    let usersInOrder = putInOrder(users, mode || 'timeAttack')
 
     let table = document.querySelector('.score__users');
-    for (let user of users) {
+    table.textContent = ''
+
+    for (let user of usersInOrder) {
         let block = document.createElement('div')
         let name = document.createElement('div')
         let point = document.createElement('div')
@@ -14,12 +15,14 @@ const showUserScore = () => {
         block.classList.add('score__item')
         name.classList.add('score__name')
         point.classList.add('score__point')
+
         name.textContent = user.name
-        point.textContent = user.practice
+        point.textContent = user[mode || 'timeAttack']
+
         block.append(name, point)
         table.append(block)
     }
-    // console.log(putInOrder(users, mode))
+
 }
 
 export default showUserScore;

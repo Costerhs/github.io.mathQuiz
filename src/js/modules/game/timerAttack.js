@@ -8,9 +8,11 @@ const timerAttack = (time) => {
     const minuteNum = Math.floor(time / 60)
     const secondNum = time % 60
 
-    minute.textContent = minuteNum
-    twice.textContent = ':'
-    second.textContent = String(secondNum).padStart(2, '0');
+    if (minute) {
+        minute.textContent = minuteNum
+        twice.textContent = ':'
+        second.textContent = String(secondNum).padStart(2, '0');
+    }
 
     if (time >= 1) {
         setTimeout(() => {

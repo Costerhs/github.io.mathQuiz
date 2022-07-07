@@ -42,7 +42,7 @@
 
 }
 
-.start__radio {
+.score__radio {
     appearance: none;
 }
 
@@ -59,7 +59,7 @@
     border-radius: 20px;
 }
 
-.start__radio:checked+.score__label {
+.score__radio:checked+.score__label {
     border: 3px solid black;
     font-size: 22px;
 }

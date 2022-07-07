@@ -4,7 +4,8 @@ function getUser() {
 
     return users.find(el => el.name === name) ?? {
         name: name,
-        point: 0
+        practice: 0,
+        timeAttack: 0
     }
 }
 
