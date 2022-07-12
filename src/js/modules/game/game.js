@@ -51,7 +51,7 @@ function game() {
     let example = generateExample()
     renderExample(example)
 
-    let time = 14;
+    let time = 120;
     if (getMode() === 'timeAttack') {
         timerAttack(time)
     }

@@ -150,19 +150,14 @@
     width: 440px;
 }
 
-.start__rules p {
+.start__rules a {
     text-decoration: none;
     cursor: pointer;
     color: black;
     width: 200px;
     border-bottom: 1px solid black;
 }
-.start__rules-passive{
-    display: none;
-}
-.start__rules-texts{
-    width: 480px;
-}
+
 @media (max-width:768px) {
     .start__title {
         font-size: 70px;
