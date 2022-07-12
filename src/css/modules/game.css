@@ -1,6 +1,6 @@
 .game {
     width: 100%;
-    height: 970px;
+    height: 100vh;
     background: url(../../img/moon.png) no-repeat;
     background-size: cover;
     position: inherit;
@@ -149,7 +149,7 @@
     position: fixed;
     width: 100%;
     top: 0;
-    margin-top: 200px;
+    margin-top: 20%;
     color: white;
     flex-direction: column;
     align-items: center;
@@ -309,5 +309,53 @@
 
     .game__down-left {
         font-size: 40px;
+    }
+}
+
+@media (max-width:576px){
+    .game__up{
+        width: 90%;
+    }
+    .game__mid{
+        width: 90%;
+        font-size: 14vw;
+    }
+    .game__result{
+        width: 28%;
+        font-size: 12vw;
+    }
+    .game__username,.game__timer{
+        font-size: 5vw;
+    }
+
+    .game__window{
+        padding: 30px 20px;
+    }
+    .window__title{
+        font-size: 14vw;
+    }
+}
+
+@media (max-width:438px){
+    .game__end{
+        height: 100%;
+        /* margin-top: 0px; */
+    }
+    .game__window{
+        width: 100%;
+        /* height: 100%; */
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+@media (max-width:390px){
+    .game__down-left{
+        font-size: 8vw;
+    }
+    .game__stop{
+        padding-top: 10% 20%;
+        font-size: 4vw;
     }
 }

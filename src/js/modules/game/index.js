@@ -1,3 +1,5 @@
 import game from './game'
+import showUserName from './showUserName';
 
-export default game;
+
+export { showUserName, game };

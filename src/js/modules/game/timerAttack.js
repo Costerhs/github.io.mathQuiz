@@ -23,6 +23,8 @@ const timerAttack = (time) => {
         const scoreBlock = document.querySelector('.score__count');
         showScoreWindow()
         setNewScore(scoreBlock.textContent)
+        const gameResult = document.querySelector('.game__result')
+        gameResult.disabled = true
     }
 
 }

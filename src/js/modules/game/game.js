@@ -51,8 +51,9 @@ function game() {
     let example = generateExample()
     renderExample(example)
 
+    let time = 14;
     if (getMode() === 'timeAttack') {
-        timerAttack(14000)
+        timerAttack(time)
     }
 
     result?.addEventListener('keydown', (e) => {
@@ -81,6 +82,7 @@ function game() {
     stopGame?.addEventListener('click', () => {
         showScoreWindow()
         showScore(score, overallWins, fails, true);
+        time = 0;
     })
 
 

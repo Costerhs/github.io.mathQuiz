@@ -1,5 +1,5 @@
 const animationExample = () => {
-    let gameBlock = document.querySelector('.game__mid');
+    const gameBlock = document.querySelector('.game__mid');
 
     gameBlock.classList.add('game__left')
     gameBlock.classList.remove('game__right')

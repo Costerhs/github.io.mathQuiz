@@ -3,15 +3,11 @@
 @import './__reset.css';
 @import './modules/score.css';
 
-body {
-    height: 100vh
-}
-
 .container {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
+    justify-content: center;
 }
 
 .send {
@@ -20,44 +16,10 @@ body {
     background-color: aqua;
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-}
-
-.list {
-    width: 400px;
-    height: 200px;
-    border: 1px solid red;
-
-}
-
 .errorText {
     color: red;
     font-size: 14px;
 }
-
-/* .score {
-    width: 400px;
-    border: 1px solid red;
-}
-
-.score__item {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.score__name {
-    font-size: 30px;
-}
-
-.score__point,
-.score__name {
-    font-size: 30px;
-    border: 1px solid blue;
-    padding: 10px;
-} */
 
 .startPage {
     width: 786px;

@@ -8,24 +8,25 @@ const showUserScore = (mode) => {
     let usersInOrder = putInOrder(users, mode || actualMode)
 
     let table = document.querySelector('.score__users');
-    table.textContent = ''
+    if (table) {
+        table.textContent = ''
 
-    for (let user of usersInOrder) {
-        let block = document.createElement('div')
-        let name = document.createElement('div')
-        let point = document.createElement('div')
+        for (let user of usersInOrder) {
+            let block = document.createElement('div')
+            let name = document.createElement('div')
+            let point = document.createElement('div')
 
-        block.classList.add('score__item')
-        name.classList.add('score__name')
-        point.classList.add('score__point')
+            block.classList.add('score__item')
+            name.classList.add('score__name')
+            point.classList.add('score__point')
 
-        name.textContent = user.name
-        point.textContent = user[mode || actualMode]
+            name.textContent = user.name
+            point.textContent = user[mode || actualMode]
 
-        block.append(name, point)
-        table.append(block)
+            block.append(name, point)
+            table.append(block)
+        }
     }
-
 }
 
 export default showUserScore;
