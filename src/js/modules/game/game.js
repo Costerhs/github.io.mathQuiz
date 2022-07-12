@@ -1,8 +1,9 @@
 import getMode from "../command/getMode.js"
-import setScore from "./setScore.js"
+import showScore from "./showScore.js"
 import showScoreWindow from "./showScoreWindow.js"
 import timerAttack from "./timerAttack.js"
-import toggleExample from "./toggleExample.js"
+import animationExample from "./animationExample.js"
+import animationScore from "./animationScore.js"
 
 const operators = ['+', '-', '*', '/']
 
@@ -45,16 +46,13 @@ function game() {
     }
 
     let overallWins = 0
-    let wins = 0
+    let score = 0
     let fails = 0
     let example = generateExample()
     renderExample(example)
 
     if (getMode() === 'timeAttack') {
-        timerAttack(14)
-        setTimeout(() => {
-            setScore(wins, overallWins, fails);
-        }, 14000);
+        timerAttack(14000)
     }
 
     result?.addEventListener('keydown', (e) => {
@@ -62,11 +60,11 @@ function game() {
             if (!result.value) return
 
             const isValidResult = Number(result.value) === example.result
-            wins += isValidResult ? 1 : -1
+            score += isValidResult ? 1 : -1
             overallWins += isValidResult ? 1 : 0
             fails += !isValidResult ? 1 : 0
 
-            winElement.textContent = wins
+            winElement.textContent = score
             result.value = ''
 
             setTimeout(() => {
@@ -74,13 +72,15 @@ function game() {
                 renderExample(example)
             }, 500);
 
-            toggleExample()
+            animationScore(isValidResult)
+            animationExample()
+            showScore(score, overallWins, fails);
         }
     })
 
     stopGame?.addEventListener('click', () => {
         showScoreWindow()
-        setScore(wins, overallWins, fails);
+        showScore(score, overallWins, fails, true);
     })
 
 

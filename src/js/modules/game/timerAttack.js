@@ -1,3 +1,4 @@
+import setNewScore from "./setNewScore"
 import showScoreWindow from "./showScoreWindow"
 
 const timerAttack = (time) => {
@@ -18,9 +19,10 @@ const timerAttack = (time) => {
         setTimeout(() => {
             timerAttack(time - 1)
         }, 1000);
-
     } else {
+        const scoreBlock = document.querySelector('.score__count');
         showScoreWindow()
+        setNewScore(scoreBlock.textContent)
     }
 
 }

@@ -1,8 +1,11 @@
 import putInOrder from "./putInOrder";
-
+import getMode from '../command/getMode'
+import getAllUsers from "../command/getAllUsers";
 const showUserScore = (mode) => {
-    let users = JSON.parse(localStorage.getItem('users'));
-    let usersInOrder = putInOrder(users, mode || 'timeAttack')
+    let users = getAllUsers();
+    let actualMode = getMode();
+
+    let usersInOrder = putInOrder(users, mode || actualMode)
 
     let table = document.querySelector('.score__users');
     table.textContent = ''
@@ -17,7 +20,7 @@ const showUserScore = (mode) => {
         point.classList.add('score__point')
 
         name.textContent = user.name
-        point.textContent = user[mode || 'timeAttack']
+        point.textContent = user[mode || actualMode]
 
         block.append(name, point)
         table.append(block)

@@ -1,6 +1,6 @@
 import setNewScore from "./setNewScore.js";
 
-const setScore = (score, correctNum, incorrectNum) => {
+const showScore = (score, correctNum, incorrectNum, isFinish) => {
     const scoreBlock = document.querySelector('.score__count');
     const correct = document.querySelector('.score__correct');
     const incorrect = document.querySelector('.score__incorrect');
@@ -11,7 +11,7 @@ const setScore = (score, correctNum, incorrectNum) => {
         incorrect.textContent = 'Incorrect: ' + incorrectNum;
     }
 
-    setNewScore(score)
+    if (isFinish) setNewScore(score)
 }
 
-export default setScore;
+export default showScore;

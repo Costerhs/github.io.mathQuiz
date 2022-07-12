@@ -14,7 +14,7 @@ if (localStorage.getItem('users') === null) {
 };
 
 
-setMode()
+setMode();
 validation();
 setActualUser();
 

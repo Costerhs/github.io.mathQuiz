@@ -1,8 +1,9 @@
+import getAllUsers from "../command/getAllUsers.js";
 import getMode from "../command/getMode.js";
 import isExist from "../command/isExist.js";
 
 function setData(activeUser) {
-    let users = JSON.parse(localStorage.getItem('users'));
+    let users = getAllUsers()
     let mode = getMode();
     if (isExist(activeUser.name, users)) {
         const user = users.find(elem => elem.name === activeUser.name);

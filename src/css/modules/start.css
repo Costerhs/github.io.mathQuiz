@@ -1,7 +1,8 @@
 .start {
     width: 100%;
-    height: 1000px;
+    height: 100%;
     background: url(../../img/clouds.jpg);
+
 }
 
 .start__title {
@@ -70,9 +71,10 @@
 }
 
 .start__mode {
+    width: 460px;
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    justify-content: space-between;
 }
 
 .start__label--active {
@@ -93,13 +95,13 @@
     margin: 0 -.25rem;
     padding: 0 .25rem;
     transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
-    border-bottom: 3px solid#518da1;
+    border: 3px solid#518da1;
     box-shadow: inset 0 0 0 0 #54b3d6;
     color: #243c44;
 }
 
 .start__label:hover {
-    border-bottom: 0;
+    border: 0;
     box-shadow: inset 230px 0 0 0 #54b3d6;
     color: white;
 }
@@ -109,22 +111,96 @@
 }
 
 .start__radio:checked+.start__label {
-    border-bottom: 0;
-    align-items: flex-end;
+    border: 0;
     box-shadow: inset 230px 0 0 0 #3f86a0;
     color: white;
 }
 
 .start__game {
     font-size: 44px;
-    margin-top: 200px;
-    width: 400px;
+    margin-top: 20px;
+    width: 460px;
     height: 90px;
+    border-radius: 10px;
     text-align: center;
-    background-color: #243c44;
+
     cursor: pointer;
+    /* color: #243c44; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #3f86a0;
+    transition: all .3s ease-in-out;
 }
 
 .start__game:hover {
-    background: #507e8d;
+    background: #1d6883;
+}
+
+.start__game a {
+    text-decoration: none;
+    color: white;
+}
+
+
+.start__rules {
+    padding-bottom: 20px;
+    margin-top: 20px;
+    width: 440px;
+}
+
+.start__rules a {
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid black;
+}
+
+@media (max-width:768px) {
+    .start__title {
+        font-size: 70px;
+    }
+}
+
+@media (max-width:500px) {
+
+    .start__game {
+        width: 90%;
+    }
+
+    .start__mode {
+        width: 90%;
+    }
+
+    .start__mode-item {
+        width: 45%;
+    }
+
+    .start__label {
+        width: 100%;
+        font-size: 5vw;
+    }
+
+    .start__rules {
+        width: 80%;
+    }
+
+    .start__game {
+        font-size: 10vw;
+    }
+
+    .start__title {
+        font-size: 14vw;
+    }
+
+    .start__form {
+        width: 90%;
+    }
+
+    .input__container {
+        width: 100%;
+    }
+
+    .start__name {
+        width: 100%;
+    }
 }

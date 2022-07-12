@@ -3,6 +3,10 @@
 @import './__reset.css';
 @import './modules/score.css';
 
+body {
+    height: 100vh
+}
+
 .container {
     display: flex;
     flex-direction: column;

@@ -1,5 +1,5 @@
 .score {
-    height: 1000px;
+
     width: 100%;
     background: url(../../img/zakyat.jpg) no-repeat;
 
@@ -22,6 +22,11 @@
 
     background: rgba(0, 0, 0, 0.5);
     border-radius: 50px;
+
+    margin-top: 120px;
+    margin-bottom: 60px;
+
+    padding-top: 20px;
 }
 
 .score__form {
@@ -67,11 +72,26 @@
 .score__users {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 90%;
     align-items: center;
     margin-top: 20px;
     gap: 20px;
     font-size: 26px;
+
+    overflow-y: scroll;
+    margin-bottom: 30px;
+}
+
+.score__users::-webkit-scrollbar {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    width: 6px;
+}
+
+.score__users::-webkit-scrollbar-thumb {
+    width: 1px;
+    background-color: white;
+    border-radius: 20px;
 }
 
 .score__item {
