@@ -1,8 +1,9 @@
 .start {
     width: 100%;
     background: url(../../img/clouds.jpg);
-    height: 100vh;
+    height: 100%;
     max-height: 969px;
+    min-height: 969px;
 }
 
 .start__title {

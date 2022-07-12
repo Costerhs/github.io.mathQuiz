@@ -4,8 +4,9 @@
 .start {
     width: 100%;
     background: url(../75316c00705f66973af8.jpg);
-    height: 100vh;
+    height: 100%;
     max-height: 969px;
+    min-height: 969px;
 }
 
 .start__title {
@@ -296,6 +297,11 @@
     width: 200px;
     color: white;
 }
+.game__result::-webkit-outer-spin-button,
+.game__result::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
 
 .game__down {
 
@@ -361,7 +367,7 @@
     position: fixed;
     width: 100%;
     top: 0;
-    margin-top: 20%;
+    margin-top: 10%;
     color: white;
     flex-direction: column;
     align-items: center;
@@ -537,7 +543,7 @@
         font-size: 12vw;
     }
     .game__username,.game__timer{
-        font-size: 5vw;
+        font-size: 30px;
     }
 
     .game__window{
@@ -775,6 +781,9 @@ iframe {
 /*!******************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!./css/style.css ***!
   \******************************************************************/
+body{
+    height: 100%;
+}
 .container {
     display: flex;
     flex-direction: column;

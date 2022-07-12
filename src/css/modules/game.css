@@ -84,6 +84,11 @@
     width: 200px;
     color: white;
 }
+.game__result::-webkit-outer-spin-button,
+.game__result::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
 
 .game__down {
 
@@ -149,7 +154,7 @@
     position: fixed;
     width: 100%;
     top: 0;
-    margin-top: 20%;
+    margin-top: 10%;
     color: white;
     flex-direction: column;
     align-items: center;
@@ -325,7 +330,7 @@
         font-size: 12vw;
     }
     .game__username,.game__timer{
-        font-size: 5vw;
+        font-size: 30px;
     }
 
     .game__window{

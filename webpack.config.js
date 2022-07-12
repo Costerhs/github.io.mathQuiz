@@ -15,12 +15,12 @@ module.exports = {
     entry: './js/bundle.js',
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'public')
     },
     devServer: {
         port: 3006,
         static: {
-            directory: path.join(__dirname, 'dist'),
+            directory: path.join(__dirname, 'public'),
         },
         watchFiles: {
             paths: ['./src/**/*.html'],
@@ -51,7 +51,7 @@ module.exports = {
             patterns: [
                 {
                     from: path.resolve(__dirname, 'src/img'),
-                    to: path.resolve(__dirname, 'dist/img')
+                    to: path.resolve(__dirname, 'public/img')
                 }
             ]
         }),
